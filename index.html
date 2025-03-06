@@ -1,25 +1,24 @@
 ﻿<html>
 <head>
-  <style>
-    src{
-      height:200px;
-      width:200px;
-    }
-  </style>
   <script>
     function fn(){
-      var a=document.querySelector('input');
-      age=parseInt(a);
-      if(age>=18){
-        a.innerText='You are eligible for vote.'   
-    }else{
-      a.innerText='Not eligible.'    
+      var a = document.querySelector('input');
+      var age = parseInt(a.value);  
+      
+      var result = document.getElementById('output'); 
+      
+      if (age >= 18) {
+        result.innerText = 'You are eligible to vote.';
+      } else {
+        result.innerText = 'Not eligible.';
+      }
     }
   </script>
 </head>
 <body>
-<h1>Hello, GitHub Pages!</h1>
-<input type='text' placeholder='Hey!'/>
-<button onclick="fn()">submit</button>
+  <h1>Hello, GitHub Pages!</h1>
+  <input type='number' placeholder='Enter your age' />
+  <button onclick="fn()">Submit</button>
+  <p id="output"></p> 
 </body>
 </html>
